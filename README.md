@@ -1,4 +1,4 @@
-# Personal Budget Tracker - Week 2 Upgrade
+# Personal Budget Tracker 
 
 ## Project Description
 This project is an upgraded version of the Personal Budget Tracker application. It expands upon the Week 1 layout by replacing static placeholders with interactive HTML tables, upgraded form controls, embedded multimedia elements, and advanced CSS styling.
