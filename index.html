@@ -1,5 +1,4 @@
-
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -10,46 +9,117 @@
 </head>
 <body>
 
-  <!-- Part 1: Page Header -->
+  <!-- Task 3: Logo added to Header -->
   <header id="main-header">
+    <img src="https://via.placeholder.com/40" alt="Budget Tracker Logo" width="40">
     <h1>My Budget Tracker</h1>
     <p>Track your income and expenses in one place.</p>
   </header>
 
   <main>
-    <!-- Part 2: Add Expense Section -->
+    <!-- Task 4: Interactive Collapsible Instructions -->
+    <section class="instructions-section card">
+      <details>
+        <summary>How to use this tracker</summary>
+        <p>Fill out the form below with your expense details, select a category, and click "Add Expense" to record your daily spending.</p>
+      </details>
+    </section>
+
+    <!-- Task 2: Upgraded Add Expense Form -->
     <section id="add-expense-section" class="card">
       <h2>Add Expense</h2>
-      <form>
+      <form id="expense-form">
         <div class="input-group">
           <label for="expense-name">Expense Name:</label>
-          <input type="text" id="expense-name" placeholder="e.g. Groceries">
+          <input type="text" id="expense-name" name="expense-name" placeholder="e.g. Groceries" required>
         </div>
 
         <div class="input-group">
           <label for="expense-amount">Amount ($):</label>
-          <input type="number" id="expense-amount" placeholder="0.00">
+          <input type="number" id="expense-amount" name="expense-amount" placeholder="0.00" required>
         </div>
 
+        <!-- Task 2: <select> dropdown with 5 options -->
         <div class="input-group">
           <label for="expense-category">Category:</label>
-          <select id="expense-category">
+          <select id="expense-category" name="expense-category" required>
             <option value="">Select a category</option>
             <option value="Food">Food</option>
             <option value="Transport">Transport</option>
-            <option value="Utilities">Utilities</option>
+            <option value="Rent">Rent</option>
             <option value="Entertainment">Entertainment</option>
+            <option value="Other">Other</option>
           </select>
         </div>
 
-        <button type="button" class="btn">Add Expense</button>
+        <div class="input-group">
+          <label for="expense-date">Date:</label>
+          <input type="date" id="expense-date" name="expense-date">
+        </div>
+
+        <!-- Task 2 & 4: Button with explicit type -->
+        <button type="button" class="btn" id="add-expense-btn">Add Expense</button>
       </form>
     </section>
 
-    <!-- Part 3: Expenses Placeholder Section -->
+    <!-- Task 1: Placeholder replaced with HTML Table -->
     <section id="expenses-list-section" class="card">
       <h2>Your Expenses</h2>
-      <p class="placeholder-text">No expenses yet</p>
+      <table class="expense-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Amount</th>
+            <th>Category</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Groceries</td>
+            <td>$120.00</td>
+            <td>Food</td>
+            <td>2026-09-10</td>
+          </tr>
+          <tr>
+            <td>Bus Pass</td>
+            <td>$45.00</td>
+            <td>Transport</td>
+            <td>2026-09-11</td>
+          </tr>
+          <tr>
+            <td>Apartment Rent</td>
+            <td>$850.00</td>
+            <td>Rent</td>
+            <td>2026-09-01</td>
+          </tr>
+          <tr>
+            <td>Movie Night</td>
+            <td>$25.00</td>
+            <td>Entertainment</td>
+            <td>2026-09-12</td>
+          </tr>
+          <tr>
+            <td>Internet Bill</td>
+            <td>$60.00</td>
+            <td>Other</td>
+            <td>2026-09-14</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Task 3: Embedded Multimedia Video -->
+    <section id="multimedia-section" class="card">
+      <h2>Budgeting Tips</h2>
+      <iframe 
+        width="100%" 
+        height="315" 
+        src="https://www.w3schools.com/html/html_exercise_embed.asp?topic=intro" 
+        title="Personal Budgeting Tips" 
+        frameborder="0" 
+        allowfullscreen>
+      </iframe>
     </section>
   </main>
 
